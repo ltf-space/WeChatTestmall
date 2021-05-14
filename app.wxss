@@ -1,0 +1,11 @@
+/**app.wxss**/
+
+@import './styles/icon/iconfont.wxss';
+page view text navigator{
+  margin: 0;
+  padding: 0;
+}
+page{
+  --themecolor:red;
+  font-size: 28rpx;
+}

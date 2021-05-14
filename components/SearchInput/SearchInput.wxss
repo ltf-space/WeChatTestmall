@@ -1,0 +1,12 @@
+.search-input {
+  padding: 10rpx 20rpx;
+  background-color: #eee;
+}
+.search-input .input {
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10rpx;
+}

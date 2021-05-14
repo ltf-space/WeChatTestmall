@@ -1,0 +1,19 @@
+<!--pages/category/index.wxml-->
+<view class="swrapper">
+  <!-- 搜索框组件 -->
+  <SearchInput></SearchInput>
+  <view class="content">
+  <!-- 左侧菜单 -->
+    <view class="left_menu">
+      <scroll-view class="" scroll-y>
+        
+      </scroll-view>
+    </view>
+    <!-- 右侧内容 -->
+    <view class="right_list">
+      <scroll-view class="" scroll-y>
+        
+      </scroll-view>
+    </view>
+  </view>
+</view>

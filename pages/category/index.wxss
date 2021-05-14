@@ -1,0 +1,21 @@
+view {
+  color: var(--themecolor);
+}
+page {
+  height: 100%;
+}
+.swrapper {
+  height: 100%;
+}
+.swrapper .content {
+  display: flex;
+  height: calc(100vh-29.2px);
+}
+.swrapper .content .left_menu {
+  flex: 2;
+  background-color: aqua;
+}
+.swrapper .content .right_list {
+  flex: 3;
+  background-color: #ff0094;
+}
