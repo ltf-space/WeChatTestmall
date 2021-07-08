@@ -1,2 +1,73 @@
-<!--pages/cart/index.wxml-->
-<text>pages/cart/index.wxml</text>
+<view class="addAddress">
+  <!-- 收货地址 -->
+  <view class="address" wx:if="{{!address.userName}}">
+    <button bindtap='handleAddAddress'>添加收货地址</button>
+  </view>
+  <view class="address_info" wx:else>
+    <view class="address_info_left">
+      <view class="address_left_top">
+        收货人:{{address.userName}}
+      </view>
+      <view class="address_left_bottom">
+        {{address.provinceName+address.cityName+address.countyName+address.detailInfo}}
+      </view>
+    </view>
+    <view class="address_info_right">
+      <view class="address_right">{{address.telNumber}}</view>
+    </view>
+  </view>
+
+  <!-- 内容区 -->
+  <view class="shop_main">
+    <view class="shopcart">购物车</view>
+    <block wx:if='{{shopInfo.length}}'>
+      <view class="shop_content">
+        <view class="content_item" wx:for="{{shopInfo}}" wx:key="goods_id">
+          <view class="content_checkBox">
+            <checkbox-group data-id='{{item.goods_id}}' bindchange="handleItemChange">
+              <checkbox checked="{{item.checked}}"></checkbox>
+            </checkbox-group>
+          </view>
+          <navigator class="">
+            <image src="{{item.goods_small_logo}}" mode="widthFix"></image>
+          </navigator>
+          <view class="content_right">
+            <view class="total">{{item.goods_name}}</view>
+            <view class="right_bottom">
+              <view class="shop_price">￥{{item.goods_price}}</view>
+              <view class="number">
+                <view class="number_cut" bindtap='handleNumEdit' 
+                data-id='{{item.goods_id}}' data-operation='{{-1}}'>-</view>
+                <view class="number_sum">{{item.num}}</view>
+                <view class="number_add" bindtap='handleNumEdit' 
+                data-id='{{item.goods_id}}' data-operation='{{1}}'>+</view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+    <!-- 当购物车没内容时显示占位图片 -->
+    <block wx:else>
+      <image class="showCartImage" mode="widthFix" src="https://img1.baidu.com/it/u=3371761928,2386125753&fm=26&fmt=auto&gp=0.jpg"></image>
+    </block>
+    
+  </view>
+
+  <!-- 底部工具栏 -->
+  <view class="shop_bottom">
+    <view class="shop_bottom_left">
+      <checkbox-group bindchange="handleAllChange">
+        <checkbox checked="{{allChecked}}">全选</checkbox>
+      </checkbox-group>
+    </view>
+    <view class="shop_bottom_right">
+      合计：<view class="countSum">￥{{totalPrice}}</view>
+      <view class="totalPrice">
+        <view class="totalPricr_item" bindtap='handlePrice'>
+          结算({{totalNum}})
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

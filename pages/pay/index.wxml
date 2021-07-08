@@ -1,2 +1,52 @@
-<!--pages/pay/index.wxml-->
-<text>pages/pay/index.wxml</text>
+<view class="addAddress">
+  <!-- 收货地址 -->
+  <view class="address" wx:if="{{!address.userName}}">
+    <button bindtap='handleAddAddress'>添加收货地址</button>
+  </view>
+  <view class="address_info" wx:else>
+    <view class="address_info_left">
+      <view class="address_left_top">
+        收货人:{{address.userName}}
+      </view>
+      <view class="address_left_bottom">
+        {{address.provinceName+address.cityName+address.countyName+address.detailInfo}}
+      </view>
+    </view>
+    <view class="address_info_right">
+      <view class="address_right">{{address.telNumber}}</view>
+    </view>
+  </view>
+
+  <!-- 内容区 -->
+  <view class="shop_main">
+    <view class="shopcart">购物车</view>
+    <view class="shop_content">
+      <view class="content_item" wx:for="{{shopInfo}}" wx:key="goods_id">
+        <navigator class="">
+          <image src="{{item.goods_small_logo}}" mode="widthFix"></image>
+        </navigator>
+        <view class="content_right">
+          <view class="total">{{item.goods_name}}</view>
+          <view class="right_bottom">
+            <view class="shop_price">￥{{item.goods_price}}</view>
+            <view class="number">
+              <view class="number_sum">X{{item.num}}</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 底部工具栏 -->
+  <view class="shop_bottom">
+    <view class="shop_bottom_right">
+      合计：<view class="countSum">￥{{totalPrice}}</view>
+      <view class="totalPrice">
+        <view class="totalPricr_item" bindtap='handleOrderPay'>
+          支付({{totalNum}})
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

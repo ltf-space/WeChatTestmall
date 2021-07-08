@@ -1,6 +1,3 @@
-view {
-  color: var(--themecolor);
-}
 page {
   height: 100%;
 }
@@ -9,13 +6,42 @@ page {
 }
 .swrapper .content {
   display: flex;
-  height: calc(100vh-29.2px);
+  height: calc(100vh - 60rpx);
 }
 .swrapper .content .left_menu {
   flex: 2;
-  background-color: aqua;
+}
+.swrapper .content .left_menu .left_menu_list {
+  height: 80rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.swrapper .content .left_menu .active {
+  color: var(--themecolor);
 }
 .swrapper .content .right_list {
-  flex: 3;
-  background-color: #ff0094;
+  flex: 5;
+}
+.swrapper .content .right_list .right_content .right_title {
+  text-align: center;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.swrapper .content .right_list .right_content .right_image {
+  display: flex;
+  flex-wrap: wrap;
+}
+.swrapper .content .right_list .right_content .right_image navigator {
+  width: 32%;
+  float: left;
+  text-align: center;
+}
+.swrapper .content .right_list .right_content .right_image navigator image {
+  width: 80%;
+  border-left: 10rpx solid #fff;
+}
+.swrapper .content .right_list .right_content .right_image navigator .goods_name {
+  font-size: 24rpx;
 }

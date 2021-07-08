@@ -1,0 +1,87 @@
+page{
+  padding-bottom: 80rpx;
+}
+.goods_detail{
+  .swiper{
+    /* swiper会有自己的宽高，在这里让swiper等于图片的宽高 */
+    // width: 800rpx;
+    height: 60vw;
+    padding: 0 10rpx;
+    text-align: center;
+    .swiperImge{
+      width: 60%;
+    }
+  }
+  .goods_second{
+    padding: 10rpx 0;
+    border-bottom: 8rpx solid #eee;
+    .goods_price{
+      color: var(--themecolor);
+      padding: 10rpx 0;
+    }
+    .goods_second_item{
+      display: flex;
+      .goods_title{
+        flex: 5;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        border-right: 4rpx solid #000;
+      }
+      .goods_collect{
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        .fontsize{
+          font-size: 20rpx;
+        }
+      }
+    }
+  }
+  .goods_third{
+    .goods_third{
+      font-size: 32rpx;
+      color: var(--themecolor);
+    }
+  }
+  .bar-bottom{
+    position: fixed;
+    width: 100%;
+    height: 100rpx;
+    left: 0;
+    bottom: 40rpx;
+    background-color: #eee;
+    display: flex;
+    .bottom{
+      flex: 1;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      position: relative;
+      button{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0;
+      }
+    }
+    .shopcar{
+      flex: 2;
+      background-color: orange;
+      color: #fff;
+    }
+    .shopbuy{
+      flex: 2;
+      background-color: red;
+      color: #fff;
+    }
+  }
+}

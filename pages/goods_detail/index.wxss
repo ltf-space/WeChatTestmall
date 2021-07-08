@@ -1,1 +1,82 @@
-/* pages/goods_detail/index.wxss */
+page {
+  padding-bottom: 80rpx;
+}
+.goods_detail .swiper {
+  /* swiper会有自己的宽高，在这里让swiper等于图片的宽高 */
+  height: 60vw;
+  padding: 0 10rpx;
+  text-align: center;
+}
+.goods_detail .swiper .swiperImge {
+  width: 60%;
+}
+.goods_detail .goods_second {
+  padding: 10rpx 0;
+  border-bottom: 8rpx solid #eee;
+}
+.goods_detail .goods_second .goods_price {
+  color: var(--themecolor);
+  padding: 10rpx 0;
+}
+.goods_detail .goods_second .goods_second_item {
+  display: flex;
+}
+.goods_detail .goods_second .goods_second_item .goods_title {
+  flex: 5;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  border-right: 4rpx solid #000;
+}
+.goods_detail .goods_second .goods_second_item .goods_collect {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.goods_detail .goods_second .goods_second_item .goods_collect .fontsize {
+  font-size: 20rpx;
+}
+.goods_detail .goods_third .goods_third {
+  font-size: 32rpx;
+  color: var(--themecolor);
+}
+.goods_detail .bar-bottom {
+  position: fixed;
+  width: 100%;
+  height: 100rpx;
+  left: 0;
+  bottom: 40rpx;
+  background-color: #eee;
+  display: flex;
+}
+.goods_detail .bar-bottom .bottom {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+}
+.goods_detail .bar-bottom .bottom button {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+.goods_detail .bar-bottom .shopcar {
+  flex: 2;
+  background-color: orange;
+  color: #fff;
+}
+.goods_detail .bar-bottom .shopbuy {
+  flex: 2;
+  background-color: red;
+  color: #fff;
+}

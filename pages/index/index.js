@@ -1,4 +1,5 @@
 import { request } from "../../request/index.js"
+import regeneratorRuntime from '../../lib/runtime/runtime';
 // 获取应用实例
 const app = getApp()
 
@@ -27,34 +28,25 @@ wx-Page({
     // 请求楼层数据
     this.getFloorList()
   },
-  getSwiperList(){// 存放轮播图数据
-    request({url:'https://api-hmugo-web.itheima.net/api/public/v1/home/swiperdata'})
-    .then(res => {
-      // console.log(res)
-      if(res.data.meta.status !== 200)return
-        this.setData({
-          swiperList:res.data.message
-        })
+  async getSwiperList(){// 存放轮播图数据
+    const res = await request({url:'/home/swiperdata'})
+    if(res.data.meta.status !== 200)return
+    this.setData({
+      swiperList:res.data.message
     })
   },
-  getCateGory(){// 存放轮播图下方分类数据
-    request({url:"https://api-hmugo-web.itheima.net/api/public/v1/home/catitems"})
-    .then(res => {
-      // console.log(res)
-      if(res.data.meta.status !== 200)return
-        this.setData({
-          cateGory:res.data.message
-        })
+  async getCateGory(){// 存放轮播图下方分类数据
+    const res = await request({url:"/home/catitems"})
+    if(res.data.meta.status !== 200)return
+    this.setData({
+      cateGory:res.data.message
     })
   },
-  getFloorList(){// 存放楼层数据
-    request({url:"https://api-hmugo-web.itheima.net/api/public/v1/home/floordata"})
-    .then(res => {
-      // console.log(res)
-      if(res.data.meta.status !== 200)return
-        this.setData({
-          floorList:res.data.message
-        })
+  async getFloorList(){// 存放楼层数据
+    const res = await request({url:"/home/floordata"})
+    if(res.data.meta.status !== 200)return
+    this.setData({
+      floorList:res.data.message
     })
   }
 })

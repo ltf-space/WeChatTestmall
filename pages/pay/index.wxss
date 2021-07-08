@@ -1,1 +1,94 @@
-/* pages/pay/index.wxss */
+page {
+  margin: 0;
+  padding: 0;
+}
+.addAddress {
+  width: 100%;
+  border-top: 4rpx solid #eee;
+}
+.addAddress .address {
+  padding: 10rpx 0;
+}
+.addAddress .address button {
+  border: solid 2rpx #eee;
+}
+.addAddress .address_info {
+  display: flex;
+  padding: 20rpx;
+}
+.addAddress .address_info .address_info_left {
+  flex: 5;
+}
+.addAddress .address_info .address_info_right {
+  flex: 3;
+  text-align: right;
+}
+.addAddress .shop_main {
+  width: 100%;
+}
+.addAddress .shop_main .shopcart {
+  font-size: 40rpx;
+  border: 4rpx solid #eee;
+  padding: 4rpx;
+  color: var(--themecolor);
+}
+.addAddress .shop_main .shop_content {
+  width: 100%;
+}
+.addAddress .shop_main .shop_content .content_item {
+  display: flex;
+  padding: 20rpx 10rpx;
+  border-bottom: 4rpx solid #eee;
+}
+.addAddress .shop_main .shop_content .content_item navigator {
+  flex: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.addAddress .shop_main .shop_content .content_item navigator image {
+  width: 60%;
+}
+.addAddress .shop_main .shop_content .content_item .content_right {
+  flex: 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.addAddress .shop_main .shop_content .content_item .content_right .total {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.addAddress .shop_main .shop_content .content_item .content_right .right_bottom {
+  display: flex;
+  justify-content: space-between;
+}
+.addAddress .shop_main .shop_content .content_item .content_right .right_bottom .shop_price {
+  color: var(--themecolor);
+}
+.addAddress .shop_bottom {
+  width: 100%;
+  height: 100rpx;
+  position: fixed;
+  bottom: 50rpx;
+  border-top: 4rpx solid #eee;
+}
+.addAddress .shop_bottom .shop_bottom_right {
+  float: right;
+  line-height: 100rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.addAddress .shop_bottom .shop_bottom_right .countSum {
+  color: var(--themecolor);
+}
+.addAddress .shop_bottom .shop_bottom_right .totalPrice {
+  width: 140rpx;
+  text-align: center;
+  background-color: red;
+  color: #fff;
+}

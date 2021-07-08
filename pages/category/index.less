@@ -1,6 +1,6 @@
-view{
-  color:var(--themecolor)
-}
+// view{
+//   color:var(--themecolor)
+// }
 page{
   height: 100%;
 }
@@ -8,14 +8,49 @@ page{
   height: 100%;
   .content{
     display: flex;
-    height: ~'calc(100vh-29.2px)';
+    // 记得减号两边有空格
+    height: ~'calc(100vh - 60rpx)';
     .left_menu{
       flex: 2;
-      background-color: aqua;
+      .left_menu_list{
+        height: 80rpx;
+        display: flex;
+        // y轴
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+      }
+      // 默认选中颜色
+      .active{
+        color: var(--themecolor);
+      }
     }
     .right_list{
-      flex: 3;
-      background-color: #ff0094;
+      flex: 5;
+      .right_content{
+        .right_title{
+          text-align: center;
+          height: 80rpx;
+          line-height: 80rpx;
+        }
+        .right_image{
+          display: flex;
+          // 换行
+          flex-wrap: wrap;
+          navigator{
+            width: 32%;
+            float: left;
+            text-align: center;
+            image{
+              width: 80%;
+              border-left: 10rpx solid #fff;
+            }
+            .goods_name{
+              font-size: 24rpx;
+            }
+          }
+        }
+      }
     }
   }
 }

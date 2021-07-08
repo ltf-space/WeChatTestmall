@@ -1,0 +1,15 @@
+<view class="swrapper">
+<!-- 横向导航 -->
+  <view class="tap_list">
+    <view wx:for="{{tap}}" wx:key="id" 
+      data-index='{{index}}'
+      bindtap="handleTap"
+      class="tap_goods_list {{item.isActive ? 'active' : ''}}"
+    >
+      {{item.value}}
+    </view>
+  </view>
+  <view class="tap_content">
+    <slot></slot>
+  </view>
+</view>

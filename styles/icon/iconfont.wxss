@@ -1,8 +1,8 @@
 @font-face {
   font-family: "iconfont"; /* Project id 2194224 */
-  src: url('//at.alicdn.com/t/font_2194224_7z5lxonkimt.woff2?t=1620819296584') format('woff2'),
-       url('//at.alicdn.com/t/font_2194224_7z5lxonkimt.woff?t=1620819296584') format('woff'),
-       url('//at.alicdn.com/t/font_2194224_7z5lxonkimt.ttf?t=1620819296584') format('truetype');
+  src: url('//at.alicdn.com/t/font_2194224_mzdcj2i0skg.woff2?t=1621329679015') format('woff2'),
+       url('//at.alicdn.com/t/font_2194224_mzdcj2i0skg.woff?t=1621329679015') format('woff'),
+       url('//at.alicdn.com/t/font_2194224_mzdcj2i0skg.ttf?t=1621329679015') format('truetype');
 }
 
 .iconfont {
@@ -13,6 +13,22 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-qicheqianlian-:before {
+  content: "\e618";
+}
+
+.icon-fenxiang:before {
+  content: "\e612";
+}
+
+.icon-kefu:before {
+  content: "\e635";
+}
+
+.icon-shoucang:before {
+  content: "\e60f";
+}
+
 .icon-tubiao14:before {
   content: "\e60e";
 }
@@ -21,18 +37,6 @@
   content: "\e7be";
 }
 
-.icon-web:before {
-  content: "\e6e9";
-}
-
-.icon-mima:before {
-  content: "\e6f8";
-}
-
 .icon-yonghu:before {
   content: "\e601";
-}
-
-.icon-anniu:before {
-  content: "\e6d7";
 }
